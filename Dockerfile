@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:jessie-backports
 MAINTAINER Jan Koppe <post@jankoppe.de>
 
 ENV OPENCAST_HOST="localhost"
@@ -10,6 +10,9 @@ RUN apt-get update \
     gnutls-dev \
     python-pip \
     build-essential
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -t jessie-backports \
+    ffmpeg
 
 RUN pip install \
     icalendar \
