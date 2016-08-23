@@ -1,11 +1,11 @@
-# Dockerfile for pyca
+# Dockerfile for pyCA
 
-This Dockerfile allows you to use a [pyca](https://github.com/lkiesow/pyCA) instance in a docker container for local testing.
+This Dockerfile allows you to run a [pyCA](https://github.com/lkiesow/pyCA) instance in a Docker container for local testing.
 
 ## Usage
 
 ```
-docker run --rm -ti -e OPENCAST_HOST=octestallinone.virtuos.uos.de:8080 docker-pyca
+docker run --rm -ti -e OPENCAST_HOST=octestallinone.virtuos.uos.de:8080 learnweb/docker-pyca
 ```
 
 ## Environment Variables
