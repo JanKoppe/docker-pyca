@@ -1,0 +1,8 @@
+---
+version: '2'
+services:
+  pyca:
+    image: learnweb/pyca:latest
+    volumes:
+      - ./pyca.conf:/etc/pyca.conf
+    command: ./start.sh

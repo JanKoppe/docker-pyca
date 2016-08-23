@@ -8,6 +8,13 @@ This Dockerfile allows you to run a [pyCA](https://github.com/lkiesow/pyCA) inst
 docker run --rm -ti -e OPENCAST_HOST=octestallinone.virtuos.uos.de:8080 learnweb/pyca
 ```
 
+Or if you want to use and modify your own `pyca.conf`, you can use the included `docker-compose` configuration:
+
+```
+docker-compose up
+```
+
+
 ## Environment Variables
 
 - **OPENCAST_HOST**: ip address or hostname for your Opencast instance.
