@@ -16,4 +16,10 @@ docker-compose up
 
 ## Environment Variables
 
+You can set these environment variables when running the container.
+
 - **OPENCAST_HOST**: ip address or hostname for your Opencast instance.
+- **OPENCAST_DIGEST_USER**: Digest username. Defaults to `opencast_system_account`.
+- **OPENCAST_DIGEST_PASS**: Digest password. Defaults to `CHANGE_ME`.
+- **PRINT_CONFIG**: Print generated pyca.conf before running.
+
