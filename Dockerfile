@@ -8,21 +8,20 @@ RUN apt-get update \
     python-dev \
     libcurl4-gnutls-dev \
     gnutls-dev \
-    python-pip \
-    build-essential
+    ca-certificates \
+    build-essential \
+    python-sqlalchemy \
+    python-flask \
+    python-pycurl \
+    python-configobj \
+    python-dateutil
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -t jessie-backports \
     ffmpeg
 
-RUN pip install \
-    icalendar \
-    python-dateutil \
-    pycurl \
-    configobj
-
 WORKDIR /pyca
 
-RUN git clone https://github.com/lkiesow/pyCA .
+RUN git clone https://github.com/opencast/pyCA .
 
 COPY ./run.sh .
 

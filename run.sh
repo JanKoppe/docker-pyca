@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ -n "$OPENCAST_HOST" ]]; then
-  sed -i "s/octestallinone.virtuos.uos.de:8080/$OPENCAST_HOST/" ./etc/pyca.conf
+  sed -i "s/https:\/\/octestallinone.virtuos.uos.de/$OPENCAST_HOST/" ./etc/pyca.conf
 fi
 
 if [[ -n "$OPENCAST_DIGEST_USER" ]]; then

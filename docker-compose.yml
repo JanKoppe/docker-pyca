@@ -1,8 +1,9 @@
 ---
-version: '2'
+version: '3'
 services:
   pyca:
-    image: learnweb/pyca:latest
+    build: .
+    image: pyca:2.1
     volumes:
       - ./pyca.conf:/etc/pyca.conf
       - ./record.sh:/pyca/record.sh
